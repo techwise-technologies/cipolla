@@ -44,9 +44,9 @@ services:
     volumes:
       - nextcloud:/var/www/html:ro
     environment:
-      - VIRTUAL_HOST=vault.cipolla.io
-      - LETSENCRYPT_HOST=vault.cipolla.io
-      - LETSENCRYPT_EMAIL=webmaster@techwise.cc
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     depends_on:
       - app
     networks:
